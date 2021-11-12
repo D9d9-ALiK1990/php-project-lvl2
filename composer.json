@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "description": "php-project-lvl2",
+    "authors": [
+        {
+            "name": "otmakhov",
+            "email": "otmakhov1990@gmail.com"
+        }
+    ],
+    "bin": [
+        "bin/gendiff"
+    ],
+    "require": {
+        "docopt/docopt": "^1.0"
+    }
+}
