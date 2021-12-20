@@ -1,4 +1,5 @@
 <?php
+
 namespace Differ;
 
 function genDiff(string $pathToFile1, string $pathToFile2)
@@ -19,7 +20,8 @@ function genDiff(string $pathToFile1, string $pathToFile2)
             if ($f1[$value] === $f2[$value]) {
                 $result .= '  ' . $value . ':' . verifyBool($f1[$value]) . PHP_EOL;
             } else {
-                $result .= ' -' . $value . ':' . verifyBool($f1[$value]) . PHP_EOL . ' +' . $value . ':' . verifyBool($f2[$value]) . PHP_EOL;
+                $result .= ' -' . $value . ':' . verifyBool($f1[$value]) . PHP_EOL .
+                    ' +' . $value . ':' . verifyBool($f2[$value]) . PHP_EOL;
             }
         } elseif (array_key_exists($value, $f1)) {
             $result .= ' -' . $value . ':' . verifyBool($f1[$value]) . PHP_EOL;
